@@ -26,6 +26,7 @@ def client():
 
 
 def test_image(client):
+    """Tests something"""
     rv = client.get("/img?left_text=build&right_text=passing")
     assert b'build' in rv.data
     assert b'passing' in rv.data
